@@ -1,0 +1,16 @@
+{
+    "name": "clagiordano/phpunit-result-printer",
+    "autoload": {
+        "psr-4": {
+            "clagiordano\\PhpunitResultPrinter\\": "src/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "4.8.*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "clagiordano\\PhpunitResultPrinter\\Tests\\": "tests/"
+        }
+    }
+}
