@@ -30,6 +30,9 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
     public function printResult(\PHPUnit_Framework_TestResult $result)
     {
         $this->printFooter($result);
+
+        $this->printErrors($result);
+        $this->printFailures($result);
     }
 
     /**
@@ -99,7 +102,7 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
         $nums = strlen($this->testTotal);
 
         printf(
-            "  [%{$nums}d / %{$nums}d] %s %-50s (%.3fs)\n",
+            "  (%{$nums}d/%{$nums}d) %s %-50s (%.3fs)\n",
             $this->suiteTestCurrent,
             $this->suiteTestTotal,
             $this->testStatus,
