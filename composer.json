@@ -1,5 +1,8 @@
 {
     "name": "clagiordano/phpunit-result-printer",
+    "description": "Phpunit custom result printer class",
+    "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "clagiordano\\PhpunitResultPrinter\\": "src/"
