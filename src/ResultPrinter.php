@@ -29,10 +29,11 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
      */
     public function printResult(\PHPUnit_Framework_TestResult $result)
     {
+	print "\n";
         $this->printFooter($result);
-
         $this->printErrors($result);
         $this->printFailures($result);
+	print "\n";
     }
 
     /**
