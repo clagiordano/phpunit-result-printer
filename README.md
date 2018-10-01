@@ -2,6 +2,10 @@
 
 PHPUnit result printer is a custom phpunit result printer with pretty output and timings
 
+Sample image:
+
+![sample_output.png](sample_output.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
