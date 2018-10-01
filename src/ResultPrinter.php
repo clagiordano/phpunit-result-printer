@@ -2,14 +2,16 @@
 
 namespace clagiordano\PhpunitResultPrinter;
 
-use PHPUnit_Framework_Test;
-use PHPUnit_Framework_TestSuite;
+use PHPUnit\Framework\Test;
+use PHPUnit\Framework\TestSuite;
+use PHPUnit\TextUI\ResultPrinter as originalResultPrinter;
+use PHPUnit\Framework\TestResult;
 
 /**
  * Class ResultPrinter
  * @package clagiordano\MarketplacesDataExport
  */
-class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
+class ResultPrinter extends originalResultPrinter
 {
     /** @var double $executionTime */
     protected $executionTime = 0.00;
@@ -25,21 +27,21 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
     protected $testTotal = null;
 
     /**
-     * @param \PHPUnit_Framework_TestResult $result
+     * @param TestResult $result
      */
-    public function printResult(\PHPUnit_Framework_TestResult $result)
+    public function printResult(TestResult $result): void
     {
-	print "\n";
+        print "\n";
         $this->printFooter($result);
         $this->printErrors($result);
         $this->printFailures($result);
-	print "\n";
+        print "\n";
     }
 
     /**
      * {@inheritdoc}
      */
-    public function endTest(PHPUnit_Framework_Test $test, $time)
+    public function endTest(Test $test, float $time): void
     {
         parent::endTest($test, $time);
 
@@ -51,9 +53,9 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
     }
 
     /**
-     * @param PHPUnit_Framework_Test $test
+     * @param Test $test
      */
-    protected function formatTestName(PHPUnit_Framework_Test $test)
+    protected function formatTestName(Test $test)
     {
         $buffer = '';
         $this->testName = $test->getName();
@@ -113,9 +115,9 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
     }
 
     /**
-     * @param PHPUnit_Framework_TestSuite $suite
+     * @param TestSuite $suite
      */
-    public function startTestSuite(PHPUnit_Framework_TestSuite $suite)
+    public function startTestSuite(TestSuite $suite): void
     {
         print "\n\033[01;36m" . $suite->getName() . "\033[0m" . ":\n";
 
@@ -135,7 +137,7 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
     /**
      * @param string $progress
      */
-    protected function writeProgress($progress)
+    protected function writeProgress(string $progress): void
     {
         $this->testStatus = $this->getStatusText($progress);
     }
