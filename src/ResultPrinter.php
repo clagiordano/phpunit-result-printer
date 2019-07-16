@@ -163,6 +163,13 @@ class ResultPrinter extends \PHPUnit_TextUI_ResultPrinter
                 break;
 
             /**
+             * Errors
+             */
+            case 'E':
+                $status = "\033[01;31mE\033[0m";
+                break;
+
+            /**
              * Other cases
              */
             default:
