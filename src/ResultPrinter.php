@@ -165,6 +165,13 @@ class ResultPrinter extends originalResultPrinter
                 break;
 
             /**
+             * Errors
+             */
+            case 'E':
+                $status = "\033[01;31mE\033[0m";
+                break;
+
+            /**
              * Other cases
              */
             default:
