@@ -49,4 +49,12 @@ class ResultPrinterTest extends TestCase
     {
         self::markTestIncomplete();
     }
+
+    /**
+     * @test
+     */
+    public function canHandleErrorTest()
+    {
+        void();
+    }
 }
