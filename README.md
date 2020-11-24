@@ -17,6 +17,15 @@ What things you need to install the software and how to install them
 - php >= 5.4
 - composer
 
+### Compatiblity table
+
+Version | PHP | Phpunit
+    :---: | :---: | :---:
+    1.x.x | >=5.3 | <=4.8
+    2.0.x | >=7.1 | ^7
+    2.1.x | >=7.1 | ^7|^8
+    3.x.x | >=7.3 | ^9
+
 ### Installing
 
 The recommended way to install phpunit-result-printer is through [Composer](https://getcomposer.org).
