@@ -20,11 +20,11 @@ What things you need to install the software and how to install them
 ### Compatiblity table
 
 Version | PHP | Phpunit
-    :---: | :---: | :---:
-    1.x.x | >=5.3 | <=4.8
-    2.0.x | >=7.1 | ^7
-    2.1.x | >=7.1 | ^7|^8
-    3.x.x | >=7.3 | ^9
+:---: | :---: | :---:
+1.x.x | >=5.3 | <=4.8
+2.0.x | >=7.1 | ^7
+2.1.x | >=7.1 | ^7\|^8
+3.x.x | >=7.3 | ^9
 
 ### Installing
 
@@ -36,7 +36,7 @@ composer require clagiordano/phpunit-result-printer
 
 After install you can edit your phpunit.xml as follow:
 
-```
+```xml
 <phpunit
     ...
     printerClass="clagiordano\PhpunitResultPrinter\ResultPrinter"
@@ -82,14 +82,13 @@ composer install
 
 One of the previous tests fails for demo purpose
 
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
