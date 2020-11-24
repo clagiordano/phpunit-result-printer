@@ -9,7 +9,7 @@
         }
     },
     "require": {
-        "phpunit/phpunit": "^7|^8",
+        "phpunit/phpunit": "^9",
         "ext-mbstring": "*"
     },
     "autoload-dev": {
