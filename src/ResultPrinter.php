@@ -4,27 +4,27 @@ namespace clagiordano\PhpunitResultPrinter;
 
 use PHPUnit\Framework\Test;
 use PHPUnit\Framework\TestSuite;
-use PHPUnit\TextUI\ResultPrinter as originalResultPrinter;
 use PHPUnit\Framework\TestResult;
+use PHPUnit\TextUI\DefaultResultPrinter;
 
 /**
  * Class ResultPrinter
  * @package clagiordano\MarketplacesDataExport
  */
-class ResultPrinter extends originalResultPrinter
+class ResultPrinter extends DefaultResultPrinter
 {
-    /** @var double $executionTime */
-    protected $executionTime = 0.00;
+    /** @var float $executionTime */
+    protected float $executionTime = 0.00;
     /** @var string $testStatus */
-    protected $testStatus = null;
+    protected string $testStatus = "";
     /** @var string $testName */
-    protected $testName = null;
+    protected string $testName = "";
     /** @var int $suiteTestCurrent */
-    protected $suiteTestCurrent = 0;
+    protected int $suiteTestCurrent = 0;
     /** @var int $suiteTestTotal */
-    protected $suiteTestTotal = 0;
+    protected int $suiteTestTotal = 0;
     /** @var int $testTotal */
-    protected $testTotal = null;
+    protected int $testTotal = 0;
 
     /**
      * @param TestResult $result
