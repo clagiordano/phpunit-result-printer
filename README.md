@@ -14,14 +14,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-- php >= 5.4
+- php >= 5.3.3
 - composer
 
 ### Compatiblity table
 
 Version | PHP | Phpunit
 :---: | :---: | :---:
-1.x.x | >=5.3 | <=4.8
+1.x.x | >=5.3.3 | <=4.8
 2.0.x | >=7.1 | ^7
 2.1.x | >=7.1 | ^7\|^8
 3.x.x | >=7.3 | ^9
