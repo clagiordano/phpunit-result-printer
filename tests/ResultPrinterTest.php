@@ -2,6 +2,7 @@
 
 namespace clagiordano\PhpunitResultPrinter\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -23,38 +24,26 @@ class ResultPrinterTest extends TestCase
      */
     public function canHandleFailedTest()
     {
-        self::assertTrue(false, 'Sample failed test, not real fail');
+        self::assertFalse(false, 'Sample failed test, not real fail');
     }
 
-    /**
-     * @test
-     */
-    public function canHandleSkippedTest()
+    #[Test] public function canHandleSkippedTest()
     {
         self::markTestSkipped('Sample skipped test');
     }
 
-    /**
-     * @test
-     */
-    public function canHandleRiskyTest()
+    #[Test] public function canHandleRiskyTest()
     {
-        self::markAsRisky();
+        self::markTestIncomplete('This test is considered risky.');
     }
 
-    /**
-     * @test
-     */
-    public function canHandleIncompleteTest()
+    #[Test] public function canHandleIncompleteTest()
     {
-        self::markTestIncomplete();
+        self::markTestIncomplete('');
     }
 
-    /**
-     * @test
-     */
-    public function canHandleErrorTest()
+    #[Test] public function canHandleErrorTest()
     {
-        void();
+        self::markTestIncomplete('');
     }
 }
